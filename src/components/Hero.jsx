@@ -16,7 +16,7 @@ export default function Hero({ onOpenModal }) {
   ];
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden grid-bg-pattern bg-radial-gradient">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Dynamic Background Glow Blobs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#FF1E56]/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[400px] h-[250px] bg-[#D4FF00]/10 rounded-full blur-[120px] pointer-events-none" />
@@ -141,8 +141,8 @@ export default function Hero({ onOpenModal }) {
           </p>
 
           <div className="relative overflow-hidden w-full">
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#08090C] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#08090C] to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-black/60 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-black/60 to-transparent z-10 pointer-events-none" />
             
             <div className="flex gap-4 animate-marquee whitespace-nowrap py-2">
               {[...marqueeLogos, ...marqueeLogos].map((item, idx) => (

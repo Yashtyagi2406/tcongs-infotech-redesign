@@ -114,7 +114,7 @@ export default function ServiceMatrix({ onOpenModal }) {
     : services.filter(s => s.category === activeCategory);
 
   return (
-    <section id="services" className="py-24 bg-[#08090C] relative overflow-hidden">
+    <section id="services" className="py-24 relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-[#FF1E56]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-72 h-72 bg-[#D4FF00]/10 rounded-full blur-3xl pointer-events-none" />

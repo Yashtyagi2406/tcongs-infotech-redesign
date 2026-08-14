@@ -42,7 +42,7 @@ export default function ComparisonMatrix({ onOpenModal }) {
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-[#0B0D13] relative overflow-hidden">
+    <section id="why-us" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}

@@ -38,7 +38,7 @@ export default function FAQSection({ onOpenModal }) {
   );
 
   return (
-    <section id="faqs" className="py-24 bg-[#08090C] relative overflow-hidden">
+    <section id="faqs" className="py-24 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}

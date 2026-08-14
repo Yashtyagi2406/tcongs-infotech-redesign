@@ -58,7 +58,7 @@ export default function FeaturedWork({ onOpenModal }) {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-24 bg-[#08090C] relative overflow-hidden">
+    <section id="portfolio" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}

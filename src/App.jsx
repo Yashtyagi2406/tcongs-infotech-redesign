@@ -26,7 +26,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#08090C] text-white selection:bg-[#FF1E56] selection:text-white relative">
+    <div className="min-h-screen text-white selection:bg-[#FF1E56] selection:text-white relative">
       {/* Full-Website Background Video */}
       <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none -z-10">
         <video
@@ -34,12 +34,13 @@ export default function App() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-35 scale-105"
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.65 }}
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
-        {/* Dark Gradient Overlay for optimal readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#08090C]/80 via-[#08090C]/60 to-[#08090C]/90 backdrop-blur-[1px]" />
+        {/* Subtle dark overlay — keeps text readable without killing the video */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,9,12,0.55) 0%, rgba(8,9,12,0.30) 40%, rgba(8,9,12,0.55) 100%)' }} />
       </div>
 
       {/* Header Navbar */}
