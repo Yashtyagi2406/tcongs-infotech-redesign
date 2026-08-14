@@ -6,7 +6,7 @@
 
 ## 🌐 Live Preview
 
-Visit the live site: [tcongsinfotech.com](https://tcongsinfotech.com)
+🔗 **[https://6a7f5014a694d274de45f1ca--neon-torrone-7ac1a2.netlify.app/](https://6a7f5014a694d274de45f1ca--neon-torrone-7ac1a2.netlify.app/)**
 
 ---
 
