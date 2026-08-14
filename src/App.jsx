@@ -35,12 +35,12 @@ export default function App() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ opacity: 0.65 }}
+          style={{ opacity: 0.28 }}
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
-        {/* Subtle dark overlay — keeps text readable without killing the video */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,9,12,0.55) 0%, rgba(8,9,12,0.30) 40%, rgba(8,9,12,0.55) 100%)' }} />
+        {/* Overlay — keeps video as a subtle ambient texture, not dominant */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,9,12,0.72) 0%, rgba(8,9,12,0.60) 40%, rgba(8,9,12,0.78) 100%)' }} />
       </div>
 
       {/* Header Navbar */}
