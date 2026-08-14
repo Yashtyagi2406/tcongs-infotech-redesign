@@ -11,6 +11,7 @@ import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
+import ScrollReveal from './components/ScrollReveal';
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -35,32 +36,65 @@ export default function App() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ opacity: 0.28 }}
+          style={{ opacity: 0.38 }}
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
-        {/* Overlay — keeps video as a subtle ambient texture, not dominant */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,9,12,0.72) 0%, rgba(8,9,12,0.60) 40%, rgba(8,9,12,0.78) 100%)' }} />
+        {/* Overlay — keeps video as ambient texture, not dominant */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(8,9,12,0.72) 0%, rgba(8,9,12,0.60) 40%, rgba(8,9,12,0.78) 100%)',
+          }}
+        />
       </div>
 
       {/* Header Navbar */}
       <Navbar onOpenModal={handleOpenModal} />
 
-      {/* Main Content Flow */}
+      {/* Main Content Flow — each section scrolls in */}
       <main>
+        {/* Hero loads immediately, no scroll reveal needed */}
         <Hero onOpenModal={handleOpenModal} />
-        <ServiceMatrix onOpenModal={handleOpenModal} />
-        <ProjectEstimator onOpenModal={handleOpenModal} />
-        <FeaturedWork onOpenModal={handleOpenModal} />
-        <ComparisonMatrix onOpenModal={handleOpenModal} />
-        <GrowthProcess onOpenModal={handleOpenModal} />
-        <Testimonials />
-        <FAQSection onOpenModal={handleOpenModal} />
-        <ContactSection />
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <ServiceMatrix onOpenModal={handleOpenModal} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <ProjectEstimator onOpenModal={handleOpenModal} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <FeaturedWork onOpenModal={handleOpenModal} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <ComparisonMatrix onOpenModal={handleOpenModal} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <GrowthProcess onOpenModal={handleOpenModal} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <Testimonials />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <FAQSection onOpenModal={handleOpenModal} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay="0ms" duration="750ms">
+          <ContactSection />
+        </ScrollReveal>
       </main>
 
-      {/* Footer */}
-      <Footer onOpenModal={handleOpenModal} />
+      {/* Footer scrolls in from bottom */}
+      <ScrollReveal direction="up" delay="0ms" duration="600ms">
+        <Footer onOpenModal={handleOpenModal} />
+      </ScrollReveal>
 
       {/* Global Project Consultation Modal */}
       <ProjectModal
